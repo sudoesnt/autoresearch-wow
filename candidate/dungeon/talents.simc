@@ -1,3 +1,4 @@
 # Evolved: talent loadout. One legal string.
 talents=CIQAAAAAAAAAAAAAAAAAAAAAAMMDDAAAAAAAAAAAAmZxMmZbmxMz2MGzw2MzYmZGbIzYxMNAzAMzmZ0sZAIjxCAmZAjZmZMbMz2yAMDGA
+spec_talents+=invoked_nightmare:0/misery:1
 omnium_talents=rune_of_unleashed_fire/rune_of_selfmending/rune_of_lingering/rune_of_critical_power/rune_of_overload

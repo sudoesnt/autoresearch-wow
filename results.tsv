@@ -32,3 +32,4 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 16	raid	225797.9	208.1	-5506.2	-23.07	66	844b94026f	no	talent [raid]: Spectral Horrors (row 7) in, Insidious Ire rank 2 (row 9) out; same point total, path legal; apparition damage vs channel/volley damage
 17	dungeon	276534.5	279.3	+290.0	+0.93	66	49f3752326	no	APL threshold [dungeon]: high-priority VT spread cap active_dot.vampiric_touch<5 -> <6 on lines 44-45 (one more top-priority VT on 6+ target packs; one number, no new branch)
 18	raid	226970.3	218.1	-4333.8	-17.51	66	1fcb588c28	no	talent [raid]: Ancient Madness -> Improved Voidform (row 6 choice node, same cost; via spec_talents+= override)
+19	dungeon	294926.0	150.0	+18681.5	+90.87	66	9532501aed	yes	talent [dungeon]: Invoked Nightmare -> Misery (Shadow row 2 choice node 82666, same cost; VT applies SW:P, so Tentacle Slam seeds 6 SW:P on packs and the cds SW:P>=VT parity gate opens mid-pack)
