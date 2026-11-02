@@ -5,3 +5,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 1	dungeon	268325.8	136.6	+10935.1	+37.00	66	9fdbe96a27	yes	hero tree: Archon talents instead of stock Voidweaver (APL unchanged)
 2	raid	229740.6	217.0	-1598.3	-6.51	66	b4e3bf92fc	no	talent: Idol of Yogg-Saron -> Idol of C'Thun (row 10, same cost; via spec_talents+= override)
 2	dungeon	264329.0	268.3	-3996.8	-13.28	66	b4e3bf92fc	no	talent: Idol of Yogg-Saron -> Idol of C'Thun (row 10, same cost; via spec_talents+= override)
+3	raid	228813.9	224.9	-2525.0	-10.00	66	bb78bf6c71	no	talent: Auspicious Spirits -> Mind Devourer (row 8, same cost; via spec_talents+= override)
+3	dungeon	263385.3	267.1	-4940.5	-16.47	66	bb78bf6c71	no	talent: Auspicious Spirits -> Mind Devourer (row 8, same cost; via spec_talents+= override)
