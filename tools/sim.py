@@ -80,7 +80,9 @@ def main() -> int:
     player = data["sim"]["players"][0]
     cd = player["collected_data"]
     dps, err = cd["dps"]["mean"], cd["dps"]["mean_std_dev"]
-    iters = data["sim"]["statistics"]["total_iterations"] if "statistics" in data["sim"] else data["sim"]["options"].get("iterations")
+    iters = (data["sim"]["options"].get("iterations")
+             or cd["dps"].get("count")
+             or data["sim"]["statistics"].get("total_iterations", 0))
     rec = {
         "run": run_id, "fight": a.fight, "hash": digest, "ok": True,
         "dps": round(dps, 1), "err": round(err, 1), "err_pct": round(100 * err / dps, 3),
