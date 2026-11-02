@@ -27,3 +27,4 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 12	dungeon	269764.7	137.4	+1438.9	+7.43	66	9a867a559d	yes	APL threshold: AoE list from active_enemies>2 -> >1 (and main dots_up gate <3 -> <2); 2-target pulls use aoe_variables is_vt_possible/max_vts logic
 13	raid	231304.1	116.9	-94.9	-0.57	66	ef21163168	yes	APL threshold: cds gate (!variable.holding_tentacle_slam|active_enemies>2) -> >1 on line 41, matching exp 12; 2-target pulls no longer hold Voidform/Halo/PI/trinkets for incoming adds
 13	dungeon	276244.5	140.6	+6479.8	+32.96	66	ef21163168	yes	APL threshold: cds gate (!variable.holding_tentacle_slam|active_enemies>2) -> >1 on line 41, matching exp 12; 2-target pulls no longer hold Voidform/Halo/PI/trinkets for incoming adds
+14	raid	231266.0	233.4	-38.1	-0.15	66	2fc528727e	no	APL threshold [raid]: Void Volley cooldown.voidform.remains<60 -> <30 (follow-up to exp 11 <45; one number, no new branch)
