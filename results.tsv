@@ -21,3 +21,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 9	dungeon	268120.6	273.0	-205.2	-0.67	66	6bf414f4e1	no	APL threshold: SW:Madness insanity.deficit<=35 -> <=40 (cast Madness earlier when near cap; one number, no new branch)
 10	raid	231541.5	218.9	+202.6	+0.82	66	52eb01dc4b	no	APL reorder: execute SW:Death (health.pct<20) moved above mind_flay_insanity in main (pure reorder, no new branch)
 10	dungeon	268039.7	271.7	-286.1	-0.94	66	52eb01dc4b	no	APL reorder: execute SW:Death (health.pct<20) moved above mind_flay_insanity in main (pure reorder, no new branch)
+11	raid	231700.5	230.0	+361.6	+1.41	66	7f5385a2ab	no	APL threshold: Void Volley cooldown.voidform.remains<60 -> <45 (hold Volley Insanity for a tighter pre-Voidform window; one number, no new branch)
+11	dungeon	268601.3	272.2	+275.5	+0.90	66	7f5385a2ab	no	APL threshold: Void Volley cooldown.voidform.remains<60 -> <45 (hold Volley Insanity for a tighter pre-Voidform window; one number, no new branch)
