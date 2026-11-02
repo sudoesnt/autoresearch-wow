@@ -8,7 +8,7 @@ for ((i=1; i<=turns; i++)); do
   n=$(($(grep -c . results.tsv 2>/dev/null || echo 1)))
   echo "=== turn $i (results rows so far: $n) $(date +%H:%M:%S)"
   env -u CLAUDECODE claude -p \
-    "Read program.md, then the tail of results.tsv and notes.md. Run exactly one experiment turn as program.md describes, then stop." \
+    "Read program.md, then the tail of results.tsv and notes.md. Run exactly one experiment turn as program.md describes, then stop. The repo (results.tsv, notes.md, git) is the only record: do not write to the Obsidian vault or any file outside this repo." \
     --permission-mode acceptEdits \
     --allowedTools "Bash(uv run tools/*),Bash(git *),Read,Edit,Write" \
     --max-turns 40 \
