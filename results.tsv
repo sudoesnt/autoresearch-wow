@@ -11,3 +11,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 4	dungeon	267043.2	269.6	-1282.6	-4.24	66	ada90cc45a	no	APL reorder: void_volley,if=cooldown.voidform.up moved above shadow_word_madness (opener banks Insanity before Voidform)
 5	raid	215794.7	211.7	-15544.2	-64.52	66	7670e3050e	no	talent: Idol of N'Zoth -> Idol of C'Thun (row 10, same cost; keeps Yogg-Saron; via spec_talents+= override)
 5	dungeon	254549.9	259.2	-13775.9	-47.02	66	7670e3050e	no	talent: Idol of N'Zoth -> Idol of C'Thun (row 10, same cost; keeps Yogg-Saron; via spec_talents+= override)
+6	raid	230259.8	231.3	-1079.1	-4.18	66	a8e20355dd	no	APL: cds list no longer waits on variable.dots_up when active_enemies=1 (Voidform fires before the opener dots land)
+6	dungeon	265797.4	270.0	-2528.4	-8.36	66	a8e20355dd	no	APL: cds list no longer waits on variable.dots_up when active_enemies=1 (Voidform fires before the opener dots land)
