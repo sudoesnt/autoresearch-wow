@@ -1,0 +1,6 @@
+vendor/
+runs/
+*.html
+.venv/
+__pycache__/
+.env
