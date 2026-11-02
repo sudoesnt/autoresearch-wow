@@ -19,3 +19,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 8	dungeon	267977.6	272.0	-348.2	-1.14	66	bdc445bafc	no	hero talent: Spiritwell -> Realized Potential (Archon choice node 109775; via hero_talents+= override)
 9	raid	231355.9	225.2	+17.0	+0.07	66	6bf414f4e1	no	APL threshold: SW:Madness insanity.deficit<=35 -> <=40 (cast Madness earlier when near cap; one number, no new branch)
 9	dungeon	268120.6	273.0	-205.2	-0.67	66	6bf414f4e1	no	APL threshold: SW:Madness insanity.deficit<=35 -> <=40 (cast Madness earlier when near cap; one number, no new branch)
+10	raid	231541.5	218.9	+202.6	+0.82	66	52eb01dc4b	no	APL reorder: execute SW:Death (health.pct<20) moved above mind_flay_insanity in main (pure reorder, no new branch)
+10	dungeon	268039.7	271.7	-286.1	-0.94	66	52eb01dc4b	no	APL reorder: execute SW:Death (health.pct<20) moved above mind_flay_insanity in main (pure reorder, no new branch)
