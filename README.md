@@ -4,7 +4,7 @@
 rotation (the SimulationCraft APL), sims it, keeps what improved, logs everything, repeats. You
 sleep. In the morning you read `results.tsv` and the agent's notes.
 
-> Pre-alpha. Shadow Priest first. Nothing here is a recommendation yet. No license yet: all rights reserved while the method settles.
+> Pre-alpha. Shadow Priest first. Nothing here is a recommendation yet. MIT licensed.
 
 ## The loop
 
@@ -60,3 +60,7 @@ uv run tools/sim.py candidate/baseline.simc --fight DungeonSlice
   profile and larger ones on a real character's gear, on odd fight profiles, and off-meta.
 - Sims are models. A simmed gain that nobody can execute is not a gain. See playability rules.
 - Everything in `results.tsv` is reproducible: same candidate hash, same seed, same simc commit.
+
+## License
+
+MIT. SimulationCraft is vendored separately under its own license.
