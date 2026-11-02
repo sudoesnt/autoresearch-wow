@@ -17,3 +17,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 7	dungeon	266639.1	271.8	-1686.7	-5.54	66	f55f04f1e8	no	hero talent: Sustained Potency -> Energy Compression (Archon row 4 choice node; via hero_talents+= override)
 8	raid	230644.9	214.2	-694.0	-2.85	66	bdc445bafc	no	hero talent: Spiritwell -> Realized Potential (Archon choice node 109775; via hero_talents+= override)
 8	dungeon	267977.6	272.0	-348.2	-1.14	66	bdc445bafc	no	hero talent: Spiritwell -> Realized Potential (Archon choice node 109775; via hero_talents+= override)
+9	raid	231355.9	225.2	+17.0	+0.07	66	6bf414f4e1	no	APL threshold: SW:Madness insanity.deficit<=35 -> <=40 (cast Madness earlier when near cap; one number, no new branch)
+9	dungeon	268120.6	273.0	-205.2	-0.67	66	6bf414f4e1	no	APL threshold: SW:Madness insanity.deficit<=35 -> <=40 (cast Madness earlier when near cap; one number, no new branch)
