@@ -23,3 +23,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 10	dungeon	268039.7	271.7	-286.1	-0.94	66	52eb01dc4b	no	APL reorder: execute SW:Death (health.pct<20) moved above mind_flay_insanity in main (pure reorder, no new branch)
 11	raid	231700.5	230.0	+361.6	+1.41	66	7f5385a2ab	no	APL threshold: Void Volley cooldown.voidform.remains<60 -> <45 (hold Volley Insanity for a tighter pre-Voidform window; one number, no new branch)
 11	dungeon	268601.3	272.2	+275.5	+0.90	66	7f5385a2ab	no	APL threshold: Void Volley cooldown.voidform.remains<60 -> <45 (hold Volley Insanity for a tighter pre-Voidform window; one number, no new branch)
+12	raid	231399.0	116.6	+60.1	+0.37	66	9a867a559d	yes	APL threshold: AoE list from active_enemies>2 -> >1 (and main dots_up gate <3 -> <2); 2-target pulls use aoe_variables is_vt_possible/max_vts logic
+12	dungeon	269764.7	137.4	+1438.9	+7.43	66	9a867a559d	yes	APL threshold: AoE list from active_enemies>2 -> >1 (and main dots_up gate <3 -> <2); 2-target pulls use aoe_variables is_vt_possible/max_vts logic
