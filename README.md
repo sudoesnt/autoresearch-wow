@@ -30,7 +30,7 @@ if it needs more than this to be legible it isn't the autoresearch pattern anymo
 SimulationCraft is Monte Carlo. Every DPS number comes with an error. A change is kept only when
 the improvement clears the combined error with margin on **every** fight profile it is scored on,
 and when it doesn't break the playability rules in `program.md`. Raid and dungeon profiles are
-scored separately; a build that trades one for the other is reported, not kept.
+loadouts. Each track is kept on its own profile; cross-track numbers are recorded for information.
 
 ## Why it isn't Raidbots
 
@@ -47,8 +47,8 @@ cmake -S vendor/simc -B vendor/simc/build -DBUILD_GUI=OFF && cmake --build vendo
 uv sync
 
 # baseline
-uv run tools/sim.py candidate/baseline.simc --fight Patchwerk
-uv run tools/sim.py candidate/baseline.simc --fight DungeonSlice
+uv run tools/sim.py --track raid
+uv run tools/sim.py --track dungeon
 
 # the loop (each iteration is one headless Claude Code turn following program.md)
 ./loop.sh 20
