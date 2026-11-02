@@ -30,3 +30,4 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 14	raid	231266.0	233.4	-38.1	-0.15	66	2fc528727e	no	APL threshold [raid]: Void Volley cooldown.voidform.remains<60 -> <30 (follow-up to exp 11 <45; one number, no new branch)
 15	dungeon	275591.3	279.2	-653.2	-2.09	66	e30cd73e13	no	APL threshold [dungeon]: holding_tentacle_slam window raid_event.adds.in<15 -> <10 on line 16 (shorter 1-target cooldown hold before packs; one number, no new branch)
 16	raid	225797.9	208.1	-5506.2	-23.07	66	844b94026f	no	talent [raid]: Spectral Horrors (row 7) in, Insidious Ire rank 2 (row 9) out; same point total, path legal; apparition damage vs channel/volley damage
+17	dungeon	276534.5	279.3	+290.0	+0.93	66	49f3752326	no	APL threshold [dungeon]: high-priority VT spread cap active_dot.vampiric_touch<5 -> <6 on lines 44-45 (one more top-priority VT on 6+ target packs; one number, no new branch)
