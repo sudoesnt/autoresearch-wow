@@ -4,7 +4,7 @@
 rotation (the SimulationCraft APL), sims it, keeps what improved, logs everything, repeats. You
 sleep. In the morning you read `results.tsv` and the agent's notes.
 
-> Private, pre-alpha. Shadow Priest first. Nothing here is a recommendation yet.
+> Pre-alpha. Shadow Priest first. Nothing here is a recommendation yet. No license yet: all rights reserved while the method settles.
 
 ## The loop
 
