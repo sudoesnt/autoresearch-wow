@@ -3,3 +3,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 0	dungeon	257390.7	262.1	+0.0	+0.00	66	c5844d0df1	baseline	stock MID2 Voidweaver profile
 1	raid	231338.9	115.0	+12699.8	+56.36	66	9fdbe96a27	yes	hero tree: Archon talents instead of stock Voidweaver (APL unchanged)
 1	dungeon	268325.8	136.6	+10935.1	+37.00	66	9fdbe96a27	yes	hero tree: Archon talents instead of stock Voidweaver (APL unchanged)
+2	raid	229740.6	217.0	-1598.3	-6.51	66	b4e3bf92fc	no	talent: Idol of Yogg-Saron -> Idol of C'Thun (row 10, same cost; via spec_talents+= override)
+2	dungeon	264329.0	268.3	-3996.8	-13.28	66	b4e3bf92fc	no	talent: Idol of Yogg-Saron -> Idol of C'Thun (row 10, same cost; via spec_talents+= override)
