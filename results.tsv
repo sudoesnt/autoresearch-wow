@@ -15,3 +15,5 @@ exp	fight	dps	err	delta	z	apl_lines	hash	kept	hypothesis
 6	dungeon	265797.4	270.0	-2528.4	-8.36	66	a8e20355dd	no	APL: cds list no longer waits on variable.dots_up when active_enemies=1 (Voidform fires before the opener dots land)
 7	raid	229214.5	208.4	-2124.4	-8.93	66	f55f04f1e8	no	hero talent: Sustained Potency -> Energy Compression (Archon row 4 choice node; via hero_talents+= override)
 7	dungeon	266639.1	271.8	-1686.7	-5.54	66	f55f04f1e8	no	hero talent: Sustained Potency -> Energy Compression (Archon row 4 choice node; via hero_talents+= override)
+8	raid	230644.9	214.2	-694.0	-2.85	66	bdc445bafc	no	hero talent: Spiritwell -> Realized Potential (Archon choice node 109775; via hero_talents+= override)
+8	dungeon	267977.6	272.0	-348.2	-1.14	66	bdc445bafc	no	hero talent: Spiritwell -> Realized Potential (Archon choice node 109775; via hero_talents+= override)
