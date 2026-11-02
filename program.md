@@ -57,6 +57,16 @@ record the number in notes (one line) so cross-track effects are visible; it doe
   Look at execute, at cooldown alignment with trinkets, and at hero-tree choice nodes.
 - A rejected idea with a clear mechanism explanation is worth as much as a keep. Say why it lost.
 
+## Tools
+
+- `uv run tools/sim.py --track raid|dungeon [--fight other] [--target-error 0.1] [--detail|--json]`
+  Run JSON in `runs/` has per-ability stats, buff uptimes, gains and procs. `--detail` prints the top
+  damage sources with cast counts and the top buff uptimes; `--json` includes them as `top_damage`
+  and `uptimes`. Use these to explain *why* a change won or lost, not just that it did.
+- `uv run tools/talents.py --track raid|dungeon` (or a talent string) decodes the loadout into
+  class / spec / hero rows with ranks. Use it before any talent swap instead of guessing from hashes.
+- `uv run tools/log.py ...` appends a result row; `uv run tools/report.py` renders the summary.
+
 ## What not to do
 
 - Don't edit `baseline.simc` or `tools/`. If a tool is broken, write it in `notes.md` and stop.

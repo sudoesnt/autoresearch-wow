@@ -6,7 +6,8 @@ usage: sim.py --track raid|dungeon [--fight raid|dungeon] [--target-error 0.2] [
 
 A track is candidate/<track>/{talents,apl}.simc on top of the shared candidate/baseline.simc.
 --fight defaults to the track's own profile; pass it explicitly to cross-check a track on the
-other profile.
+other profile. Run JSON in runs/ carries per-ability stats, buff uptimes, gains and procs
+(report_details=1); --detail prints the headline ones.
 """
 from __future__ import annotations
 
@@ -49,6 +50,7 @@ def main() -> int:
     ap.add_argument("--target-error", type=float, default=0.2)
     ap.add_argument("--threads", type=int, default=os.cpu_count() or 4)
     ap.add_argument("--json", action="store_true", help="print the full result record as JSON")
+    ap.add_argument("--detail", action="store_true", help="also print top damage sources and buff uptimes")
     a = ap.parse_args()
 
     if not SIMC.exists():
@@ -70,7 +72,7 @@ def main() -> int:
 
     cmd = [str(SIMC), str(inp), *FIGHTS[fight],
            f"target_error={a.target_error}", f"threads={a.threads}",
-           "report_details=0", "optimal_raid=1", f"json2={out}"]
+           "report_details=1", "optimal_raid=1", f"json2={out}"]
     t0 = time.time()
     proc = subprocess.run(cmd, capture_output=True, text=True)
     secs = time.time() - t0
@@ -88,8 +90,14 @@ def main() -> int:
     iters = (data["sim"]["options"].get("iterations")
              or cd["dps"].get("count")
              or data["sim"]["statistics"].get("total_iterations", 0))
+    top = sorted((x for x in player.get("stats", []) if x.get("type") == "damage" and x.get("portion_amount", 0) > 0.005),
+                 key=lambda x: -x["portion_amount"])[:12]
+    buffs = sorted((b for b in player.get("buffs", []) if b.get("uptime", 0) > 1), key=lambda b: -b["uptime"])
     rec = {
         "run": run_id, "track": a.track, "fight": fight, "hash": digest, "ok": True,
+        "top_damage": [{"name": x["name"], "share": round(100 * x["portion_amount"], 1),
+                        "casts": round(x.get("num_executes", {}).get("mean", 0), 1)} for x in top],
+        "uptimes": {b["name"]: round(b["uptime"], 1) for b in buffs[:20]},
         "dps": round(dps, 1), "err": round(err, 1), "err_pct": round(100 * err / dps, 3),
         "iterations": iters, "apl_lines": apl_lines, "secs": round(secs, 1),
         "talents": player.get("talents", ""), "simc_version": data["version"],
@@ -99,6 +107,9 @@ def main() -> int:
     else:
         label = f"{a.track or 'file'}→{fight}"
         print(f"{label:16s} {dps:10.1f} ± {err:6.1f}  ({rec['err_pct']}%)  iters={iters}  apl_lines={apl_lines}  {secs:5.1f}s  {digest}")
+        if a.detail:
+            print("  damage: " + ", ".join(f"{x['name']} {x['share']}% ({x['casts']} casts)" for x in rec["top_damage"]))
+            print("  uptime: " + ", ".join(f"{k} {v}%" for k, v in list(rec["uptimes"].items())[:12]))
     return 0
 
 
